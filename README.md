@@ -8,7 +8,7 @@
    - [テストの構造化](docs/Jest/structuring-tests.md)
    - [パラメータライズテスト](docs/Jest/parameterized-tests.md)
    - [モックを使ったテスト](docs/Jest/testing-with-mocks.md)
-- UI コンポーネントテスト
+- [UI テスト](docs/ui-test.md)
 - Storybook を使った ビジュアルリグレッションテスト
 - バックエンドのテスト
 - フロントエンドのテスト
