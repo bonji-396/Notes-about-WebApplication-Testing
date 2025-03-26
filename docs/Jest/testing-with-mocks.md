@@ -72,7 +72,36 @@ test('multiply をモックして square をテスト', () => {
 
 ## `SpyOn`を利用したモック
 `jest.spyOn()` を使って、既存の関数を一時的にモック化し、呼び出し検証や戻り値の制御を行う方法を示しています。
+### 基本的使い方
+#### spyOn.ts
+```ts
+export class Calculator {
+  sum(a: number, b: number): number {
+    return a + b;
+  }
+}
+```
+#### 
+```ts
+import { Calculator } from './spyon-mock';
 
+test('sumメソッドをSpyOnする', () => {
+  const calc = new Calculator();
+  // spyの設定
+  const sumSpy = jest.spyOn(calc, 'sum');
+  const result = calc.sum(1, 2);
+  expect(result).toBe(3);
+  expect(sumSpy).toHaveBeenCalledWith(1, 2);
+  expect(sumSpy).toHaveBeenCalledTimes(1);
+
+  expect(calc.sum(1, 2)).toBe(33);
+
+  // spyの解除
+  sumSpy.mockRestore();
+});
+```
+
+### 実践例
 #### user-service.ts
 ```ts
 export function getUserName(id: number): string {
@@ -259,6 +288,41 @@ Ran all test suites matching /data-service.test.ts/i.
 ## モジュール全体のモック
 モジュール全体（設定値やログ出力など）をモックし、外部依存を排除してテストの再現性を高める方法を解説しています。
 
+### 基本例
+#### module-mock.ts
+```ts
+import fs from 'fs';
+
+export const readFile = (path: string) => {
+  const data = fs.readFileSync(path, {
+    encoding: 'utf-8',
+  });
+  return data;
+};
+```
+
+#### module-mock.test.ts
+```ts
+import fs from 'fs';
+import { readFile } from './module-mock';
+import exp from 'constants';
+
+jest.mock('fs');
+const mockFs = jest.mocked(fs);
+mockFs.readFileSync.mockReturnValue('dummy');
+
+test('readFileでダミーデータが返却される', () => {
+  const result = readFile('path/dummy');
+  expect(result).toBe('dummy');
+  expect(fs.readFileSync).toHaveBeenCalledWith('path/dummy', {
+    encoding: 'utf-8',
+  });
+  expect(fs.readFileSync).toHaveBeenCalledTimes(1);
+});
+
+```
+
+### 実践例
 #### config.ts
 ```ts
 export const config = {

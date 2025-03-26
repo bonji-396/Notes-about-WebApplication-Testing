@@ -5,7 +5,7 @@ Meta社が開発して、JavaScript、TypeScriptのテストフレームワー�
 Babel、Node、React、Angular、Vue など、基本的にJavaScriptやTypeScriptで書かれたコードであれば、様々なフレームワークで利用することが可能です。
 
 
-日本語でのドキュメントも充実しているので、基本的にはこちらの[公式ドキュメント](https://jestjs.io/ja/docs/getting-started)を参照すると良いでしょう。
+日本語でのドキュメントも充実しており、まずはこちらの[公式ドキュメント](https://jestjs.io/ja/docs/getting-started)を参照すると良いでしょう。
 
 ## Jestの特徴
 
