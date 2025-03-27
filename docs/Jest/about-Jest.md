@@ -7,6 +7,7 @@ Babel、Node、React、Angular、Vue など、基本的にJavaScriptやTypeScrip
 
 日本語でのドキュメントも充実しており、まずはこちらの[公式ドキュメント](https://jestjs.io/ja/docs/getting-started)を参照すると良いでしょう。
 
+
 ## Jestの特徴
 
 - 設定不要ですぐ使える（ゼロコンフィグ）
@@ -21,6 +22,7 @@ Babel、Node、React、Angular、Vue など、基本的にJavaScriptやTypeScrip
    - UIコンポーネントの変更を追跡
 - 並列実行
    - 複数のテストを並列実行して高速化が図れる
+
 
 ## 基本的使い方
 
@@ -104,6 +106,7 @@ Time:        0.664 s, estimated 1 s
 Ran all test suites.
 ```
 
+
 ### npmからのテスト実行
 #### package.json
 ```json
@@ -136,6 +139,7 @@ Snapshots:   0 total
 Time:        0.666 s, estimated 1 s
 Ran all test suites.
 ```
+
 
 ## マッチャー（Matchers）
 Jestには様々な比較用マッチャーが用意されています。  
