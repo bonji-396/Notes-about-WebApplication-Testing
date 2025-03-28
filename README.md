@@ -12,7 +12,9 @@
    - [UI テストとは](docs/ui-test/about-ui-test.md)
    - [UI コンポーネントテスト](docs/ui-test/ui-component-test/index.md)
       - UIコンポーネントテストとは
-      - [UIコンポーネントテスト（React / Testing-library + Jest）](docs/ui-test/ui-component-test/react-jest.md)
+      - [UIコンポーネントテスト（React + TypeScript + Vite + Jest）](docs/ui-test/ui-component-test/react-jest.md)
+      - UIコンポーネントテスト（Angular + TypeScript + Jest）
+      - UIコンポーネントテスト（フレームワークなし TypeScript + Jest）
 - Storybook を使った ビジュアルリグレッションテスト
 - バックエンドのテスト
 - フロントエンドのテスト

@@ -2,7 +2,7 @@
 React + TypeScript + Vite 環境において、テストフレームワークとして Jest を使う構成で、以下のようにセットアップし直した上で、各テストパターンに対応するサンプルコードを記載。
 
 ## サンプルテスト対象の構築
-React + TypeScript + Vite + Jest　セットアップを行います。
+React + TypeScript + Vite + Jest 環境のセットアップを行います。
 
 ### 1. Vite プロジェクト作成
 
@@ -18,6 +18,10 @@ npm install
 npm install --save-dev jest @types/jest ts-jest ts-node @testing-library/react @testing-library/jest-dom @testing-library/user-event jest-environment-jsdom
 ```
 ### 3. Jest 設定ファイル作成（jest.config.ts）
+
+```sh
+npx ts-jest config:init
+```
 
 ```ts
 /** @type {import('ts-jest').JestConfigWithTsJest} */
@@ -271,7 +275,7 @@ Ran all test suites matching /.\/src\/components\/Counter.snapshot.test.tsx/i.
 #### Counter.snapshot.test.tsx.snap
 実行時に __snapshots__ ディレクトリが作成され、次回以降差分がチェックされます。
 
-```snap
+```ts
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`matches snapshot 1`] = `
@@ -287,5 +291,5 @@ exports[`matches snapshot 1`] = `
   </div>
 </div>
 `;
-
 ```
+
