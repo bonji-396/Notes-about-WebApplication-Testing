@@ -26,5 +26,6 @@
    - コントローラ
    - 結合
 - フロントエンドのテスト
-- E2E Test
+- E2E テスト
+   - [E2Eテストとツール](docs/E2E/e2e-testing-and-tools.md)
 
